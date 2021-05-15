@@ -10,7 +10,26 @@
     "Other"
   ],
   "activationEvents": [
-    "*"
+    "onLanguage:dart",
+    "workspaceContains:pubspec.yaml",
+    "workspaceContains:*/pubspec.yaml",
+    "workspaceContains:*/*/pubspec.yaml",
+    "workspaceContains:*.dart",
+    "workspaceContains:*/*.dart",
+    "workspaceContains:*/*/*.dart",
+    "workspaceContains:dart.sh.create",
+    "workspaceContains:flutter.sh.create",
+    "workspaceContains:flutter.create",
+    "onCommand:flutter.createProject",
+    "onCommand:flutter.createProject.module",
+    "onCommand:flutter.createProject.package",
+    "onCommand:flutter.createProject.plugin",
+    "onCommand:dart.createProject",
+    "onCommand:_dart.flutter.createSampleProject",
+    "onCommand:flutter.doctor",
+    "onCommand:flutter.upgrade",
+    "onUri",
+    "onDebugDynamicConfigurations"
   ],
   "main": "./out/extension.js",
   "contributes": {
