@@ -10,16 +10,40 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:touchbar-shortcuts.helloWorld"
+    "*"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "touchbar-shortcuts.helloWorld",
-        "title": "Hello World"
+        "command": "touchbar-shortcuts.rename",
+        "title": "Rename"
+      },
+      {
+        "command": "touchbar-shortcuts.fix-all-imports",
+        "title": "Fix All Imports"
+      },
+      {
+        "command": "touchbar-shortcuts.fix-imports",
+        "title": "Fix Imports"
       }
-    ]
+    ],
+    "menus": {
+      "touchBar": [
+        {
+          "command": "touchbar-shortcuts.rename",
+          "group": "editing"
+        },
+        {
+          "command": "touchbar-shortcuts.fix-all-imports",
+          "group": "refactor"
+        },
+        {
+          "command": "touchbar-shortcuts.fix-imports",
+          "group": "refactor"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
