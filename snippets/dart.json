@@ -1,1 +1,83 @@
-{}
+{
+    "CleanArchitectureController": {
+        "prefix": "fcacontroller",
+        "body": [
+            "import 'package:flutter_clean_architecture/flutter_clean_architecture.dart';",
+            "class $1PageController extends Controller {",
+            "\tfinal $1PagePresenter _presenter;",
+            "\tfinal $1PageStateMachine _stateMachine = new $1PageStateMachine();",
+            "\tfinal navigationService = serviceLocator<NavigationService>();",
+            "\t$1PageController()",
+            "\t\t\t: _presenter = serviceLocator<$1PagePresenter>(),",
+            "\t\t\t super();",
+            "\n\t@override",
+            "\tvoid initListeners() {}",
+            "\n\t@override",
+            "\tvoid onInitState() {",
+            "\t\tsuper.onInitState();",
+            "\t}",
+            "\n\t@override",
+            "\tvoid onDisposed() {",
+            "\t\t_presenter.dispose();",
+            "\t\tsuper.onDisposed();",
+            "\t}",
+            "\n\t$1State getCurrentState() {",
+            "\t\treturn _stateMachine.getCurrentState();",
+            "\t}",
+            "}"
+        ]
+    },
+    "CleanArchitecturePresenter": {
+        "prefix": "fcapresenter",
+        "body": [
+            "import 'package:flutter_clean_architecture/flutter_clean_architecture.dart';",
+            "class $1PagePresenter extends Presenter {",
+            "\t$1PagePresenter();",
+            "\n\t@override",
+            "\tdispose() {",
+            "\t}",
+            "}"
+        ]
+    },
+    "CleanArchitectureView": {
+        "prefix": "fcaview",
+        "body": [
+            "import 'package:flutter_clean_architecture/flutter_clean_architecture.dart';",
+            "class $1Page extends View {",
+            "\t@override",
+            "\tState<StatefulWidget> createState() => $1ViewState();",
+            "}",
+            "class $1ViewState extends ResponsiveViewState<$1Page, $1PageController> {",
+            "\t$1ViewState() : super(new $1PageController());",
+            "\n\t@override",
+            "\tWidget get desktopView => throw UnimplementedError();",
+            "\n\t@override",
+            "\tWidget get mobileView => throw UnimplementedError();",
+            "\n\t@override",
+            "\tWidget get tabletView => throw UnimplementedError();",
+            "\n\t@override",
+            "\tWidget get watchView => throw UnimplementedError();",
+            "}"
+        ]
+    },
+    "CleanArchitectureStateMachine": {
+        "prefix": "fcastatemachine",
+        "body": [
+            "class $1PageStateMachine extends StateMachine<$1State, $1Event> {",
+            "\t$1PageStateMachine() : super($1PageInitializationState());",
+            "\n\t@override",
+            "\t$1State getStateOnEvent($1Event event) {",
+            "\t\t// final eventType = event.runtimeType;",
+            "\t\t// $1State newState = getCurrentState();",
+            "\t\t// switch (eventType) {",
+            "\t\t// }",
+            "\t\t//return newState;",
+            "\t\tthrow UnimplementedError();",
+            "\t}",
+            "}",
+            "\nclass $1State {}",
+            "\nclass $1PageInitializationState extends $1State {}",
+            "\nclass $1Event {}"
+        ]
+    }
+}
