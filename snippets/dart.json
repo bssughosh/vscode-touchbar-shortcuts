@@ -6,7 +6,7 @@
             "class $1PageController extends Controller {",
             "\tfinal $1PagePresenter _presenter;",
             "\tfinal $1PageStateMachine _stateMachine = new $1PageStateMachine();",
-            "\tfinal navigationService = serviceLocator<NavigationService>();",
+            "\tfinal _navigationService = serviceLocator<NavigationService>();",
             "\t$1PageController()",
             "\t\t\t: _presenter = serviceLocator<$1PagePresenter>(),",
             "\t\t\t super();",
