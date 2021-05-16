@@ -1,7 +1,7 @@
 {
   "name": "touchbar-shortcuts",
   "displayName": "touchbar-shortcuts",
-  "description": "Touchbar shortcuts",
+  "description": "Touchbar shortcuts for Vscode",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.56.0"
