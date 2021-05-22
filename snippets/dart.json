@@ -22,7 +22,7 @@
             "\t\tsuper.onDisposed();",
             "\t}",
             "\n\t$1State getCurrentState() {",
-            "\t\treturn _stateMachine.getCurrentState();",
+            "\t\treturn _stateMachine.getCurrentState()!;",
             "\t}",
             "}"
         ]
