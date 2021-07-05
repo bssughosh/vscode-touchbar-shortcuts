@@ -63,13 +63,12 @@
     "CleanArchitectureStateMachine": {
         "prefix": "fcastatemachine",
         "body": [
-            "class $1PageStateMachine extends StateMachine<$1State, $1Event> {",
+            "class $1PageStateMachine extends StateMachine<$1State?, $1Event> {",
             "\t$1PageStateMachine() : super($1PageInitializationState());",
             "\n\t@override",
-            "\t$1State getStateOnEvent($1Event event) {",
-            "\t\t// final eventType = event.runtimeType;",
-            "\t\t// $1State newState = getCurrentState();",
-            "\t\t// switch (eventType) {",
+            "\t$1State? getStateOnEvent($1Event event) {",
+            "\t\t// $1State? newState;",
+            "\t\t// switch (event.runtimeType) {",
             "\t\t// }",
             "\t\t//return newState;",
             "\t\tthrow UnimplementedError();",
